@@ -1,0 +1,62 @@
+{
+  "posts": [
+    {
+      "date": 1627689600000,
+      "nom": "Bach",
+      "prenom": "Yvonne",
+      "email": "yvonneB@mail.com",
+      "societe": "Ceci est un Exemple",
+      "id": 1
+    },
+    {
+      "date": 1627776000000,
+      "nom": "Dunn",
+      "prenom": "Juanita",
+      "email": "dunnjuanita@exemple.net",
+      "societe": "Société Exemple",
+      "id": 2
+    },
+    {
+      "date": 1627862400000,
+      "nom": "Donnelly",
+      "prenom": "Laura",
+      "email": "lauradonell@mail.co.uk",
+      "societe": "Société UK",
+      "id": 3
+    },
+    {
+      "date": 1628035200000,
+      "nom": "Sayegh",
+      "prenom": "Majdy",
+      "email": "msayegh@mail.dz",
+      "societe": "",
+      "id": 4
+    },
+    {
+      "date": 1628121600000,
+      "nom": "Stanković",
+      "prenom": "Mara",
+      "email": "stankomara@mail.net",
+      "societe": "Société UE",
+      "id": 5
+    },
+    {
+      "date": 1628294400000,
+      "nom": "Lundberg",
+      "prenom": "Andreas",
+      "email": "alundberg@mail.se",
+      "societe": "Fonds Gemini",
+      "id": 6
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
