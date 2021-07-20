@@ -1,7 +1,36 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'Radikal';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/radikal/RadikalRegular.otf'); /* IE9 Compat Modes */
 }
-
+@font-face {
+  font-family: 'RadikalBlack';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/radikal/RadikalBlack.otf'); /* IE9 Compat Modes */
+}
+body {
+  font-family: 'Radikal';
+}
+h1 {
+  font-family: 'RadikalBlack';
+  font-size: 2.5em ;
+  margin-top: 0;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-image: url("./assets/img/big-bg2.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -14,7 +43,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,11 +56,294 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+} */
+svg {
+  width: 10%;
+  stroke: white !important;
+  stroke-width: 0.5;
+  fill: white;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+header {
+  background-color: #cb5223;
+}
+
+.path {
+  animation: dash 5s linear 1;
+}
+.heading{
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+}
+
+@keyframes dash {
+  0% {
+    fill: transparent;
+    stroke-dashoffset: 800;
+    stroke-width: 1;
+
+
+  }
+  80%{
+    stroke-dashoffset: 0;
+    
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: white;
+  }
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100% !important;
+  background-image: url('./assets/img/bgPopUp.png');
+  height: 100vh;
+}
+.modal-form{
+padding: 50px;
+padding-top: 25px;
+}
+.modal-header{
+  height: 3em;
+  width: 100%;
+  font-size: 2em;
+  color: #282828;
+}
+.modal-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.modal-header .close{
+  top: 5%;
+  right: 0;
+  width: 1em;
+  background-color: #282828;
+  height: 1em;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.modal-header button.close{
+  display: none;
+}
+.modal-content {
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.modal-body{
+  display: flex;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-body form{
+  width: 100%;
+}
+
+.modal-body form .semiInput {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+}
+.modal-body form .semiInput label {
+  width : 48%;
+}
+.modal-body form .semiInput input {
+  font-size: 1em;
+  width: 100%;
+}
+.modal-body form button {
+  font-size: 1.3em;
+  font-family: 'RadikalBlack';
+
+}
+.modal-body input{
+  color: #282828;
+  width: 100%;
+  height: 1.5em;
+  margin: 0.5em 0;
+  margin-bottom: 2.5em;
+  font-size: 1.2em;
+}
+.modal-body label{
+  color: #282828;
+  font-size: 1.45em;
+  text-align: left;
+}
+
+.fc-media-screen{
+  width: 80%;
+  margin: auto;
+  margin-bottom: 10%;
+}
+.fc.fc-scroller {
+  height: auto!important;
+  overflow-y: auto;
+}
+
+.calendar{
+  background-color: white;
+  width: 80%;
+  margin: auto ;
+  padding: 2em 0;
+  border-radius: 4px;
+  box-shadow: 2px 2px 8px black;
+  background-size: cover;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+} 
+
+.calendar::before {
+  content: "";  
+  background-image: url('./assets/img/itembg.png');
+  opacity: 0.6  ;
+  top: 0;
+  left: 0;
+  bottom: 0;  
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+span {
+  position: relative;
+}
+.logoPlace{
+  position: relative;
+  height: 15%;
+  width: 100%;
+}
+span.logo{
+  width: 150px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  background-image: url('./assets/img/telkea.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 25px;
+}
+
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 4px;
+  grid-row-gap: 4px;
+  padding: 20px;
+  }
+.item {
+  border: 1px solid #d0d0d0;
+  padding: 20px;
+}
+.item:hover{
+  color: white;
+  background-color: #B22D89;
+}
+.inputRow{
+  position: relative;
+}
+ul{
+ display: flex;
+ flex-wrap: wrap;
+ margin: auto;
+ max-width: 100%;
+ left: 0;
+ padding: 0.5em;
+ justify-content: space-between;
+}
+li{
+  border: black solid 2px; 
+  padding: 1em;
+  margin-bottom: 1em;
+  list-style-type: none;
+  border-radius: 4px;
+  width: 28%;
+}
+.card-resa .card-head{
+  margin-bottom: 1em;
+  text-align: left;
+}
+.card-resa .card-date{
+  font-weight: 800;
+  font-size: 0.8em;
+}
+.card-resa .card-identity{
+  font-weight: 800;
+  font-size: 1.2em;
+}
+  
+.card-resa .card-footer{
+  margin-top: 1em;
+  text-align: right;
+  /* font-size: 1.1em; */
+}
+
+/*
+.card-resa card- */
+@media only screen and (max-width: 768px) {
+ h1{
+   margin: 1em 0;
+ }
+ span.logo{
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 50px 100px;
+ }
+
+.calendar svg{
+  display: none;
+}
+.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 4px;
+  grid-row-gap: 4px;
+  padding: 20px;
+  }
+  .modal-body form .semiInput{
+    display: block;
+    width: 100%;
+  }
+  .form__group{
+    width: 100% !important;
+  }
+  .modal-body form button{
+    margin: 0.5em;
+  }
+  h2{
+    font-size: 1.1em;
+    margin-bottom: 0.3em;
+  }
+  .modal-header{
+    font-size: 1.2em;
+  }
+  .heading{
+    display: block;
+    align-items: end;
+    
   }
 }
